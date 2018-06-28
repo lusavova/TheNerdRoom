@@ -1,0 +1,51 @@
+header {
+    background-color: rgb(242, 242, 242);
+    text-align: center;
+}
+
+#lamp-logo {
+    margin-top: 2%;
+    max-width: 6%;
+}
+
+#the-nerd-room-logo {
+    position: relative;
+    left: -10px;
+    top: -20px;
+    border-bottom: 1px;
+    border-bottom-color: rgb(166, 166, 166);
+    border-bottom-style: dashed;
+    padding-top: 2%;
+    padding-bottom: 1%;
+    max-width: 30%;
+}
+
+nav ul {
+    list-style: none;
+    position: relative;
+    bottom: 25px;
+}
+
+#initial-nav-bar ul li {
+    display: inline-block;
+}
+
+#initial-nav-bar ul li a {
+    display: block;
+    color: rgb(89,89,89);
+    text-decoration: none;
+    font-size: 16px;
+    padding: 10px;
+    font-family: 'Bahnschrift Condensed';
+    font-style: normal;
+    text-transform: uppercase;
+}
+
+
+footer{
+    padding-top: 20px;
+    background-color: slategray;
+    color: white;
+    font-family: 'Bahnschrift Condensed';
+    text-align: right;
+}
