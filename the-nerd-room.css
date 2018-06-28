@@ -3,12 +3,23 @@ header {
     text-align: center;
 }
 
-#lamp-logo {
+#search-icon{
+    display: inline-block;
+    float: right;
+    margin: 1%;
+}
+
+#search-icon img{
+    margin: 0;
+    max-width: 25px;
+}
+
+#nav-initial #lamp-logo {
     margin-top: 2%;
     max-width: 6%;
 }
 
-#the-nerd-room-logo {
+#nav-initial #the-nerd-room-logo {
     position: relative;
     left: -10px;
     top: -20px;
@@ -20,25 +31,25 @@ header {
     max-width: 30%;
 }
 
-nav ul {
+#initial-nav-bar ul li {
     list-style: none;
     position: relative;
     bottom: 25px;
-}
-
-#initial-nav-bar ul li {
     display: inline-block;
 }
 
 #initial-nav-bar ul li a {
+    font-family: 'Bahnschrift Condensed', sans-serif;
     display: block;
     color: rgb(89, 89, 89);
     text-decoration: none;
     font-size: 16px;
     padding: 10px;
-    font-family: 'Bahnschrift Condensed';
     font-style: normal;
     text-transform: uppercase;
+}
+#initial-nav-bar ul li a:hover {
+    color:crimson;
 }
 
 footer {
@@ -52,3 +63,35 @@ footer {
     width: 100%;
     font-size: 12px;
 }
+/* 
+#nav-docked {
+    background-color: rgb(242, 242, 242);
+}
+
+.nav-logo,
+.nav-icons {
+    display: inline-block;
+}
+
+#lamp-logo {
+    margin: 1%;
+    max-width: 3.5%
+}
+
+#the-nerd-room-logo {
+    max-width: 15%;
+    position: relative;
+    left: -20px;
+    top: -35px;
+}
+
+#nav-docked li {
+    display: inline-block;
+    padding-right: 20px;
+}
+#nav-docked li a {
+display: inline-block;
+}
+#nav-docked li a img {
+    height: 40px;
+} */
