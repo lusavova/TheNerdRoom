@@ -205,6 +205,7 @@ img {
 .author-photo img {
     max-width: 100%;
     border-radius: 50%;
+    box-shadow: 2px 2px 2px rgb(173, 173, 173);
 }
 
 .book-img-container {
@@ -226,18 +227,15 @@ img {
 }
 
 #book-title {
-    border-top: 1px rgb(122, 122, 122) dashed;
-    border-bottom: 1px rgb(122, 122, 122) dashed;
     margin: 3%;
-    padding-top: 2%;
-    padding-bottom: 1%;
+    padding-top: 5px;
+    padding-bottom: 5px;
 }
 
 .book-info-container,
 .current-book-info-container {
     float: left;
-    padding-bottom: 1.5%;
-    border-bottom: 1px rgb(122, 122, 122) dashed;
+    margin-top: 3%;
 }
 
 .current-book-info-container {
@@ -264,18 +262,19 @@ p::first-letter {
 
 /* COMMENTS */
 
-hr{
+hr {
+    margin-top: 2.2%;
     border: 0;
     height: 1px;
     background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
 }
 
-.comments {
+.comments, .reviews {
+    vertical-align: top;
     float: left;
     width: 75%;
     margin-top: 2%;
     margin-left: 5.5%;
-    border-bottom: 1px rgb(122, 122, 122) dashed;
 }
 
 .comments-container>a:hover {
@@ -284,23 +283,46 @@ hr{
 
 #textarea {
     float: right;
-    margin-right: 5%;
-    margin-top: 3%;
-    margin-bottom: 3%;
+    margin: 3% 10%;
+    margin-top:1%; 
     color: rgb(163, 163, 163);
     border: 1px rgb(179, 179, 179) solid;
     border-radius: 1%;
+    width: 80%;
+}
+
+.edit-buttons {
+    display: inline-block;
+    text-align: right;
+    margin-top:3%;
+    margin-right: 10%;
+}
+
+.edit-buttons button {
+    width: 2%;
+    border: none;
+    color: white;
+    text-align: center;
+    cursor: pointer;
+    padding: 2px;
+    border-radius: 3px;
+}
+
+.comment-edit-buttons button:hover {
+    outline-color: white;
+    background-color: rgb(173, 248, 253);
 }
 
 /* FOOTER */
 
-/* footer {
-    position: relative;
+footer {
+    float: left;
+    text-align: right;
+    width: 100%;
+    padding: 10px;
     background: rgb(0, 0, 0);
-    height: 100px;
 }
 
 footer p {
-    text-align: left;
     color: white;
-} */
+}
