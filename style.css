@@ -3,14 +3,38 @@
     padding: 0;
 }
 
+html,
+body,
+#wrapper,
+main,
+.sidebar {
+    height: 100%;
+}
+
 body {
+    min-height: 100%;
     color: rgb(89, 89, 89);
-    font-size: 16px;
+    font-size: 18px;
 }
 
 body,
 .search input[type=text] {
     font-family: 'Bahnschrift Condensed', sans-serif;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    text-decoration: none;
+    color: rgb(89, 89, 89);
+}
+
+a:hover {
+    text-decoration: none;
+    color: rgb(89, 89, 89);
+    font-weight: bolder;
 }
 
 .initial-header {
@@ -28,7 +52,7 @@ body,
 .search input[type=text] {
     padding: 5px;
     margin-top: 15px;
-    font-size: 1em;
+    font-size: 16px;
     border: none;
     outline-color: rgb(255, 255, 110);
     color: rgb(0, 33, 63);
@@ -40,7 +64,6 @@ body,
     margin-top: 14px;
     margin-right: 16px;
     background: rgb(245, 245, 150);
-    font-size: 1em;
     border: none;
     cursor: pointer;
     border-radius: 5px;
@@ -84,6 +107,9 @@ img {
     position: relative;
     top: -20px;
     font-style: normal;
+}
+
+.uppercase {
     text-transform: uppercase;
 }
 
@@ -92,18 +118,14 @@ img {
 }
 
 .list.list-horizontal li a {
-    text-decoration: none;
-    color: rgb(89, 89, 89);
     padding-left: 15px;
 }
 
 .list.list-horizontal li a:hover {
     color: crimson;
-    font-weight: bolder;
 }
 
 /* MAIN BOOKS AND SIDEBAR */
-
 
 .text-left {
     text-align: left;
@@ -111,29 +133,78 @@ img {
 
 .sidebar {
     float: left;
-    width: 20%;
+    width: 15%;
+    font-size: 16px;
+    background: yellow;
 }
 
 .books {
     float: left;
-    width: 80%;
+    width: 79%;
 }
 
 .sidebar,
-.books {
+.books,
+.current-book {
     margin-top: 20px;
+    margin-left: 2%;
 }
 
-.item-container {}
+.item-container {
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
 
 .item-container .item {
-    width: 24%;
-    text-align: center;
+    width: 22%;
+    text-align: left;
+    display: inline-block;
+    vertical-align: top;
+    margin-left: 2%;
+    border-bottom: 1px rgb(122, 122, 122) dashed;
+    padding-bottom: 1%;
+}
+
+.img-container img {
+    padding: 2%;
+    max-width: 300px;
+    max-height: 300px;
+    border: 1px rgb(190, 190, 190) dashed;
+}
+
+.book-info {
+    color: rgb(201, 137, 0);
+    font-size: 14px;
+}
+
+.italic {
+    font-style: italic;
+}
+
+.author {
+    font-size: 14px;
+}
+
+/* CURRENT BOOK CSS */
+
+.current-book {
+    float: left;
+    width: 79%
+}
+
+footer{
+    position: relative;
+    background: rgb(0, 0, 0);
+    height: 100px;
+}
+
+footer p{
+    text-align: left;
+    color: white;
+}
+
+.inline{
     display: inline-block;
     vertical-align: top;
 }
 
-.img-container img {
-    max-width: 300px;
-    max-height: 300px;
-}
