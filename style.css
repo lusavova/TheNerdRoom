@@ -187,24 +187,120 @@ img {
 
 /* CURRENT BOOK CSS */
 
-.current-book {
-    float: left;
-    width: 79%
+.inline {
+    display: inline-block;
 }
 
-footer{
+.book-img-container,
+.book-container,
+.author-photo {
+    float: left;
+}
+
+.author-photo {
+    width: 20%;
+    margin-top: 9%
+}
+
+.author-photo img {
+    max-width: 100%;
+    border-radius: 50%;
+}
+
+.book-img-container {
+    width: 30%;
+    padding-top: 2%;
+    padding-left: 2%;
+    text-align: center;
+    /* border: 1px black solid; */
+}
+
+.book-img-container>img {
+    box-shadow: 3px 3px 2px grey;
+}
+
+.book-container {
+    width: 45%;
+    padding: 10px;
+    /* border: 1px black solid; */
+}
+
+#book-title {
+    border-top: 1px rgb(122, 122, 122) dashed;
+    border-bottom: 1px rgb(122, 122, 122) dashed;
+    margin: 3%;
+    padding-top: 2%;
+    padding-bottom: 1%;
+}
+
+.book-info-container,
+.current-book-info-container {
+    float: left;
+    padding-bottom: 1.5%;
+    border-bottom: 1px rgb(122, 122, 122) dashed;
+}
+
+.current-book-info-container {
+    width: 54%;
+}
+
+.book-info-container {
+    width: 20%;
+    color: rgb(201, 137, 0);
+    padding-right: 3%;
+}
+
+.book-sum {
+    padding: 10px;
+    font-family: 'Book Antiqua';
+    font-size: 15px;
+    text-align: justify;
+}
+
+p::first-letter {
+    font-size: 200%;
+    font-style: italic;
+}
+
+/* COMMENTS */
+
+hr{
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+}
+
+.comments {
+    float: left;
+    width: 75%;
+    margin-top: 2%;
+    margin-left: 5.5%;
+    border-bottom: 1px rgb(122, 122, 122) dashed;
+}
+
+.comments-container>a:hover {
+    color: goldenrod;
+}
+
+#textarea {
+    float: right;
+    margin-right: 5%;
+    margin-top: 3%;
+    margin-bottom: 3%;
+    color: rgb(163, 163, 163);
+    border: 1px rgb(179, 179, 179) solid;
+    border-radius: 1%;
+}
+
+/* FOOTER */
+
+/* footer {
     position: relative;
     background: rgb(0, 0, 0);
     height: 100px;
 }
 
-footer p{
+footer p {
     text-align: left;
     color: white;
-}
-
-.inline{
-    display: inline-block;
-    vertical-align: top;
-}
-
+} */
