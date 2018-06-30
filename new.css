@@ -1,0 +1,258 @@
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Bahnschrift Condensed', sans-serif;
+    font-size: 20px;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+body,
+.search input[type=text] {
+    font-family: 'Bahnschrift Condensed', sans-serif;
+}
+
+ul {
+    list-style-type: none;
+}
+
+header {
+    background-color: rgb(242, 242, 242);
+}
+
+#search-bar {
+    text-align: right;
+}
+
+.search input[type=text] {
+    font-size: 16px;
+    border: none;
+    border-radius: 3px;
+    outline-color: rgb(255, 255, 110);
+    color: rgb(0, 33, 63);
+    width: 50%;
+}
+
+.search button {
+    background: rgb(245, 245, 150);
+    border: none;
+    cursor: pointer;
+    outline: none;
+    width: 10%;
+    border-radius: 5px;
+}
+
+#img-button {
+    width: 15px;
+}
+
+#submit-button:hover {
+    background: rgb(219, 156, 255);
+}
+
+.logo>img {
+    max-width: 60%;
+}
+
+.logo {
+    margin: 0 auto;
+    width: 10%;
+    margin-bottom: 1%;
+}
+
+.logo img {
+    margin-left: 20%;
+}
+
+hr.sep-line {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+}
+
+a:-webkit-any-link {
+    color: black;
+}
+
+.list.list-horizontal {
+    font-style: normal;
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+.list.list-horizontal li {
+    display: inline-block;
+}
+
+.list.list-horizontal li a {
+    padding-left: 15px;
+}
+
+.list.list-horizontal li a:hover {
+    color: crimson;
+}
+
+.list.list-horizontal {
+    margin: 0 auto;
+}
+
+.aside {
+    background: salmon;
+    padding: 20px;
+}
+
+.left {
+    background: pink;
+}
+
+footer {
+    background: yellow;
+}
+
+.item {
+    padding-right: 0;
+}
+
+/* CURRENT BOOK */
+
+.book-container {
+    margin: 0;
+    padding: 0;
+}
+
+.book-img-container {
+    padding-top: 2%;
+    text-align: right;
+}
+
+.book-img-container>img {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    max-width: 80%;
+}
+
+div.info {
+    color: rgb(209, 112, 0);
+}
+
+.current-book-info-container div {
+    padding-left: 2%;
+}
+
+.current-book-info-container a:hover {
+    text-decoration: none;
+    font-weight: bolder;
+    color: rgb(32, 32, 32);
+}
+
+#author-photo {
+    position: relative;
+    left: 7%;
+}
+
+#author-photo img {
+    float: left;
+    max-width: 20%;
+    border-radius: 50%;
+    box-shadow: 2px 2px 2px rgb(173, 173, 173);
+}
+
+.book-sum {
+    font-family: 'Book Antiqua';
+    font-size: 15px;
+    text-align: justify;
+    padding-top: 3.5%;
+}
+
+.book-sum::first-letter {
+    font-size: 250%;
+    font-style: italic;
+}
+
+/* COMMENT SECTION */
+
+.comments-container a {
+    padding-left: 2%;
+}
+
+.comments {
+    float: left;
+    margin-top: 2%;
+}
+
+.comments-container>a:hover {
+    color: goldenrod;
+    text-decoration: none;
+}
+
+#textarea {
+    float: right;
+    margin: 2% 10%;
+    margin-top: 1%;
+    color: rgb(163, 163, 163);
+    border: 1px rgb(179, 179, 179) solid;
+    border-radius: 1%;
+    color: rgb(49, 49, 49);
+    width: 50%;
+    height: 150px;
+}
+
+::placeholder {
+    color: rgb(156, 156, 156);
+    opacity: 1;
+}
+
+.img-button {
+    max-width: 80%;
+}
+
+.edit-buttons {
+    display: inline-block;
+    text-align: right;
+    margin-top: 3%;
+    margin-right: 10%;
+}
+
+.edit-buttons button {
+    width: 3%;
+    border: none;
+    color: white;
+    text-align: center;
+    cursor: pointer;
+    padding: 2px;
+    border-radius: 3px;
+}
+
+.edit-buttons button:hover {
+    outline-color: white;
+    background: rgb(219, 156, 255);
+}
+
+
+
+@media screen and (max-width: 1024px){
+    .book-img-container{
+        text-align: center;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .edit-buttons button {
+        width: 7%;
+    }
+
+    #textarea {
+        width: 70%;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .edit-buttons button {
+        width: 8%;
+        
+    }
+
+}
