@@ -3,5 +3,4 @@ $('.title').on('click', function () {
     var $this = $(this);
 
     $(".books").hide();
-
 });

@@ -3,16 +3,18 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="new.css">
+    <title>The Nerd Room</title>
+
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.1/css/bootstrap.min.css" integrity="sha384-WskhaSGFgHYWDcbwN70/dfYBj47jz9qbsMId/iRN3ewGhXQFZCSftd1LZCfmhktB"
         crossorigin="anonymous">
-
+    <link rel="stylesheet" href="new.css">
+    <link rel="stylesheet" href="new.js">
+    <script src="mustache.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 
 </head>
 
-<body class="">
+<body>
     <header>
 
         <div class="row">
@@ -60,40 +62,42 @@
     </header>
 
     <main>
-        <div class="row">
+        <div class="row justify-content-center">
 
-            <div class="aside col-lg-3 col-md-3 col-sm-0 col-xs-1">
+            <div class="aside col-lg-3 col-md-0 col-sm-12 col-xs-0">
                 ASIDE
             </div>
 
-            <!-- <div class="item.container col-lg-9 col-md-9 col-sm-0">
-                <div class="row">
-                    <div class="item col-lg-3 col-md-5 col-sm-0 col-xs-0">
-                        <div class="img-container">
-                            <img src="book-covers/1984.jpeg" alt="1984 Book Cover">
-                        </div>
-                        <div class="title-and-author">
-                            <div class="title">
-                                <a href="#">1984</a>
+
+            <div class="item.container col-lg-9 col-md-9 col-sm-0">
+                    <div class="row">
+                        <div class="item col-lg-3 col-md-5 col-sm-0 col-xs-0">
+                            <div class="img-container">
+                                <img src="book-covers/1984.jpeg" alt="1984 Book Cover">
                             </div>
-                            <div class="book-info">by</div>
-                            <div class="author italic">
-                                <a href="#">George Orwell</a>
+                            <div class="title-and-author">
+                                <div class="title">
+                                    <a href="#">1984</a>
+                                </div>
+                                <div class="book-info">by</div>
+                                <div class="author italic">
+                                    <a href="#">George Orwell</a>
+                                </div>
                             </div>
                         </div>
+                    
                     </div>
                 </div>
-            </div> -->
 
 
-            <!-- <div class="current-book-container col-lg-9 col-md-9 col-sm-0 col-xs-0">
-                <div class="row">
+            <!-- <div class="current-book-container col-lg-9 col-md-10 col-sm-0 col-xs-0">
+                <div class="row justify-content-center">
 
-                    <div class="book-img-container col-lg-4 col-md-9 col-sm-0 col-xs-0">
+                    <div class="book-img-container col-lg-4 col-md-12 col-sm-0 col-xs-0">
                         <img src="book-covers/the-great-gatsby.jpg" alt="The Great Gatsby Book Cover">
                     </div>
 
-                    <div class="book-container col-lg-7 col-md-0 col-sm-0">
+                    <div class="book-container col-lg-8 col-md-0 col-sm-0">
                         <hr>
                         <div id="book-title ">
                             <h1 class="uppercase">The Great Gatsby</h1>
@@ -135,141 +139,205 @@
                             been described as a cautionary tale regarding the American Dream.</p>
                     </div>
 
-                </div>
+                    <section class="comments col-lg-12 col-md-12 col-sm-0 col-xs-0">
+                        <div class="comments-container">
+                            <a id="bnt-show-hide-comments" href="#">
+                                <img src="new-elements/left (2).png" alt="OPEN">
+                            </a>
 
-                <section class="comments">
-                    <div class="comments-container">
-                        <a class="uppercase" href="#">
-                            Comments
-                        </a>
+                            <a id="comment-link" class="comment-section uppercase" href="#">
+                                Comments
+                            </a>
+                            <div class="comment hide-section">
+                                <hr>
+                                <div class="edit-buttons">
+                                    <button id="bold">
+                                        <img class="img-button" src="text-edit-icons/bold.png" alt="Bold">
+                                    </button>
+                                    <button id="italic">
+                                        <img class="img-button" src="text-edit-icons/italic.png" alt="Bold">
+                                    </button>
+                                    <button id="underline">
+                                        <img class="img-button" src="text-edit-icons/underline.png" alt="Bold">
+                                    </button>
+                                    <button id="font-size">
+                                        <img class="img-button" src="text-edit-icons/font-size.png" alt="Bold">
+                                    </button>
+                                    <button id="paperclip">
+                                        <img class="img-button" src="text-edit-icons/paperclip.png" alt="Bold">
+                                    </button>
+                                </div>
 
-                        <hr>
+                                <div class="row justify-content-end">
+                                    <div class="col-12">
+                                        <textarea id="textarea" placeholder="Enter your comment here."></textarea>
+                                    </div>
+                                    <div id="leave-comment col-11">
+                                        <button>
+                                            Comment
+                                        </button>
+                                    </div>
+                                </div>
 
-                        
-                            <div class="edit-buttons">
-                                <button id="bold" >
-                                    <img class="img-button" src="text-edit-icons/bold.png" alt="Bold">
-                                </button>
-                                <button id="italic">
-                                    <img class="img-button" src="text-edit-icons/italic.png" alt="Bold">
-                                </button>
-                                <button id="underline">
-                                    <img class="img-button" src="text-edit-icons/underline.png" alt="Bold">
-                                </button>
-                                <button id="font-size">
-                                    <img class="img-button" src="text-edit-icons/font-size.png" alt="Bold">
-                                </button>
-                                <button id="paperclip">
-                                    <img class="img-button" src="text-edit-icons/paperclip.png" alt="Bold">
-                                </button>
                             </div>
-                        
+                        </div>
+                    </section>
 
-                        <div>
-                            <textarea id="textarea" placeholder="Enter your comment here."></textarea>
+                    <section class="reviews col-lg-12 col-md-12 col-sm-0 col-xs-0">
+
+                        <div class="reviews-container">
+                            <a id="bnt-show-hide" href="#">
+                                <img src="new-elements/left (2).png" alt="OPEN">
+                            </a>
+
+                            <a id="reviews-link" class="reviews-section uppercase" href="#">
+                                reviews
+                            </a>
+                            <div class="reviews hide-section">
+                                <hr>
+                                <div class="edit-buttons">
+                                    <button id="bold">
+                                        <img class="img-button" src="text-edit-icons/bold.png" alt="Bold">
+                                    </button>
+                                    <button id="italic">
+                                        <img class="img-button" src="text-edit-icons/italic.png" alt="Bold">
+                                    </button>
+                                    <button id="underline">
+                                        <img class="img-button" src="text-edit-icons/underline.png" alt="Bold">
+                                    </button>
+                                    <button id="font-size">
+                                        <img class="img-button" src="text-edit-icons/font-size.png" alt="Bold">
+                                    </button>
+                                    <button id="paperclip">
+                                        <img class="img-button" src="text-edit-icons/paperclip.png" alt="Bold">
+                                    </button>
+                                </div>
+
+
+                                <div class="row">
+                                    <div class="col-lg-12 ">
+                                        <textarea id="textarea" placeholder="Enter your comment here."></textarea>
+                                    </div>
+                                </div>
+
+                                <div id="leave-review" class="col-lg-11 col-md-0 col-sm-0">
+                                    <button id="add-review-button">
+                                        Add
+                                    </button>
+                                </div>
+
+                            </div>
                         </div>
 
+                    </section>
+                    <hr>
+
+                </div>
+            </div> -->
+
+
+        </div>
+
+
+        <!-- <div class="pad cover col-9">
+            <img id="item-cover" src="project/music/jazz/John Coltrane/john-coltrane-cover.jpg" alt="">
+
+            <hr>
+
+            <div class="row ">
+                <div class="col-3">
+                    <img id="artist-photo" class="personal-photo" src="project/music/jazz/John Coltrane/john-coltrane-photo.jpg" alt="">
+                </div>
+                <div class="col-9">
+                    <div class="row artist-info">
+
+                        <div class="name col-12">
+                            <a href="#">John Coltrane</a>
+                            <hr>
+                        </div>
+
+                        <div class="artist-info-container col-3 info text-right">
+                            Born in:
+                        </div>
+                        <div class="current-artist-info-container col-7">
+                            Hamlet, Richmond County, North Carolina, United States
+                        </div>
+                        <div class="artist-info-container col-3 info text-right">
+                            Born/Died:
+                        </div>
+                        <div class="current-artist-info-container col-7">
+                            23 September 1926/17 July 1967 (aged 40)
+                        </div>
                     </div>
-                </section>
+                </div>
+            </div>
+
+            <hr>
+
+            <div class="col-11">
+                <h3 class="uppercase custom-info">Biography</h3>
+
+                <p class="bio"> John William Coltrane (Hamlet, North Carolina, September 23, 1926 – Huntington, New York, July 17, 1967)
+                    was an American jazz saxophonist and composer. American jazz great John Coltrane emerged in the 1950s,
+                    playing tenor and soprano sax with Dizzy Gillespie, Miles Davis and Thelonious Monk. A leader of "hard
+                    bop", in the 1960s he led his own groups and changed the face of jazz with experimentation and improvisation,
+                    his later recordings reflecting his belief that music was a form of spiritual expression. Sometimes called
+                    simply 'Trane, his recordings include Giant Steps (1959), My Favorite Things (1960), Olé (1961) and A
+                    Love Supreme (1964). In his later recordings he collaborated on avante-garde music with his wife, Alice
+                    Coltrane (b. Alice McLeod, 1937-2007), who had a career in her own right. The band sometimes called Coltrane's
+                    "classic quartet" of the early 1960s included McCoy Tyner (piano), Elvin Jones (drums) and Jimmy Garrison
+                    (bass). Despite a relatively brief career (he first came to notice as a sideman at age 29 in 1955, formally
+                    launched a solo career at 33 in 1960, and was dead at 40 in 1967), saxophonist John Coltrane was among
+                    the most important, and most controversial, figures in jazz. It seems amazing that his period of greatest
+                    activity was so short, not only because he recorded prolifically, but also because, taking advantage
+                    of his fame, the record companies that recorded him as a sideman in the 1950s frequently reissued those
+                    recordings under his name and there has been a wealth of posthumously released material as well. Since
+                    Coltrane was a protean player who changed his style radically over the course of his career, this has
+                    made for much confusion in his discography and in appreciations of his playing. There remains a critical
+                    divide between the adherents of his earlier, more conventional (if still highly imaginative) work and
+                    his later, more experimental work. No one, however, questions Coltrane's almost religious commitment
+                    to jazz or doubts his significance in the history of the music.</p>
+            </div>
+            <hr>
+
+
+            <div class="col-12">
+                <h3 class="uppercase custom-info">Albums</h3>
+
+
+                <div class="album-covers row">
+                    <div class="album-cover col-3">
+                        <img class="border album-cover-img" src="project/music/jazz/John Coltrane/john-coltrane-album-a-love-suprime.jpg" alt="">
+                        <div class="album-name">
+                            <a href="#">A Love Suprime</a>
+                        </div>
+                        <div class="album-year">1965</div>
+                    </div>
+                    <div class="album-cover col-3">
+                        <img class="border album-cover-img" src="project/music/jazz/John Coltrane/john-coltrane-album-ballads.jpg" alt="">
+                        <div class="album-name">
+                            <a href="#">Blue train</a>
+                        </div>
+                        <div class="album-year">1967</div>
+                    </div>
+                    <div class="album-cover col-3">
+                        <img class="border album-cover-img" src="project/music/jazz/John Coltrane/john-coltrane-album-fav-thing.jpg" alt="">
+                        <div class="album-name">
+                            <a href="#">My favourite thing</a>
+                        </div>
+                        <div class="album-year">1961</div>
+                    </div>
+                    <div class="album-cover col-3">
+                        <img class="border album-cover-img" src="project/music/jazz/John Coltrane/john-coltrane-album-ole.jpg" alt="">
+                        <div class="album-name">
+                            <a href="#">Ole</a>
+                        </div>
+                        <div class="album-year">1961</div>
+                    </div>
+                </div>
 
             </div>
         </div> -->
-
-
-            <div class="pad cover col-8 ">
-                <img id="item-cover" src="project/music/jazz/John Coltrane/john-coltrane-cover.jpg" alt="">
-
-                <hr>
-
-                <div class="row ">
-                    <div class="col-3">
-                        <img id="artist-photo" class="personal-photo" src="project/music/jazz/John Coltrane/john-coltrane-photo.jpg" alt="">
-                    </div>
-                    <div class="col-9">
-                        <div class="row artist-info">
-
-                            <div class="name col-12">
-                                <a href="#">John Coltrane</a>
-                                <hr>
-                            </div>
-
-                            <div class="artist-info-container col-3 info text-right">
-                                Born in:
-                            </div>
-                            <div class="current-artist-info-container col-7">
-                                <a href="#">Hamlet, Richmond County, North Carolina, United States</a>
-                            </div>
-                            <div class="artist-info-container col-3 info text-right">
-                                Born/Died:
-                            </div>
-                            <div class="current-artist-info-container col-7">
-                                23 September 1926/17 July 1967 (aged 40)
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <hr>
-
-                <div class="col-11">
-                    <h3 class="uppercase custom-info">Biography</h3>
-
-                    <p class="bio"> John William Coltrane (Hamlet, North Carolina, September 23, 1926 – Huntington, New York, July 17, 1967)
-                        was an American jazz saxophonist and composer. American jazz great John Coltrane emerged in the 1950s,
-                        playing tenor and soprano sax with Dizzy Gillespie, Miles Davis and Thelonious Monk. A leader of
-                        "hard bop", in the 1960s he led his own groups and changed the face of jazz with experimentation
-                        and improvisation, his later recordings reflecting his belief that music was a form of spiritual
-                        expression. Sometimes called simply 'Trane, his recordings include Giant Steps (1959), My Favorite
-                        Things (1960), Olé (1961) and A Love Supreme (1964). In his later recordings he collaborated on avante-garde
-                        music with his wife, Alice Coltrane (b. Alice McLeod, 1937-2007), who had a career in her own right.
-                        The band sometimes called Coltrane's "classic quartet" of the early 1960s included McCoy Tyner (piano),
-                        Elvin Jones (drums) and Jimmy Garrison (bass). Despite a relatively brief career (he first came to
-                        notice as a sideman at age 29 in 1955, formally launched a solo career at 33 in 1960, and was dead
-                        at 40 in 1967), saxophonist John Coltrane was among the most important, and most controversial, figures
-                        in jazz. It seems amazing that his period of greatest activity was so short, not only because he
-                        recorded prolifically, but also because, taking advantage of his fame, the record companies that
-                        recorded him as a sideman in the 1950s frequently reissued those recordings under his name and there
-                        has been a wealth of posthumously released material as well. Since Coltrane was a protean player
-                        who changed his style radically over the course of his career, this has made for much confusion in
-                        his discography and in appreciations of his playing. There remains a critical divide between the
-                        adherents of his earlier, more conventional (if still highly imaginative) work and his later, more
-                        experimental work. No one, however, questions Coltrane's almost religious commitment to jazz or doubts
-                        his significance in the history of the music.</p>
-                </div>
-                <hr>
-
-
-                <div class="col-12">
-                    <h3 class="uppercase custom-info">Albums</h3>
-
-
-                    <div class="album-covers row">
-                        <div class="album-cover col-3">
-                            <img class="border album-cover-img" src="project/music/jazz/John Coltrane/john-coltrane-album-a-love-suprime.jpg" alt="">
-                            <div class="album-name"><a href="#">A Love Suprime</a></div>
-                            <div class="album-year">1965</div>
-                        </div>
-                        <div class="album-cover col-3">
-                            <img class="border album-cover-img" src="project/music/jazz/John Coltrane/john-coltrane-album-ballads.jpg" alt="">
-                            <div class="album-name"><a href="#">Blue train</a></div>
-                            <div class="album-year">1967</div>
-                        </div>
-                        <div class="album-cover col-3">
-                            <img class="border album-cover-img" src="project/music/jazz/John Coltrane/john-coltrane-album-fav-thing.jpg" alt="">
-                            <div class="album-name"><a href="#">My favourite thing</a></div>
-                            <div class="album-year">1961</div>
-                        </div>
-                        <div class="album-cover col-3">
-                            <img class="border album-cover-img" src="project/music/jazz/John Coltrane/john-coltrane-album-ole.jpg" alt="">
-                            <div class="album-name"><a href="#">Ole</a></div>
-                            <div class="album-year">1961</div>
-                        </div>
-                    </div>
-
-                </div>
-            </div>
-
-
 
 
     </main>
@@ -283,6 +351,9 @@
             </div>
         </div>
     </footer>
+
+
+    <script src="new.js"></script>
 </body>
 
 </html>

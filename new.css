@@ -177,10 +177,6 @@ div.info {
 
 /* COMMENT SECTION */
 
-.comments-container a {
-    padding-left: 2%;
-}
-
 .comments {
     float: left;
     margin-top: 2%;
@@ -232,6 +228,14 @@ div.info {
 .edit-buttons button:hover {
     outline-color: white;
     background: rgb(219, 156, 255);
+}
+
+#bnt-show-hide {
+    padding: 2px;
+}
+
+#leave-comment button{
+margin-right: 100px;
 }
 
 /* MUSIC sheet */
@@ -291,8 +295,8 @@ div.info {
     text-align: center;
 }
 
-.album-cover{
-    padding-top:1.5%; 
+.album-cover {
+    padding-top: 1.5%;
     background: rgb(236, 236, 236);
 }
 
@@ -302,9 +306,18 @@ div.info {
     color: rgb(32, 32, 32);
 }
 
+#leave-review{
+    text-align: right;
+}
+
+
 @media screen and (max-width: 1024px) {
     .book-img-container {
         text-align: center;
+    }
+
+    .add-review-button{
+        width: 150%;
     }
 }
 
@@ -313,7 +326,7 @@ div.info {
         width: 7%;
     }
     #textarea {
-        width: 70%;
+        width: 80%;
     }
 }
 
