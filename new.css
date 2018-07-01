@@ -153,10 +153,13 @@ div.info {
     left: 7%;
 }
 
+.personal-photo {
+    border-radius: 50%;
+}
+
 #author-photo img {
     float: left;
     max-width: 20%;
-    border-radius: 50%;
     box-shadow: 2px 2px 2px rgb(173, 173, 173);
 }
 
@@ -231,10 +234,76 @@ div.info {
     background: rgb(219, 156, 255);
 }
 
+/* MUSIC sheet */
 
+#item-cover,
+.album-cover-img {
+    max-width: 100%;
+}
 
-@media screen and (max-width: 1024px){
-    .book-img-container{
+#item-cover {
+    max-width: 100%;
+    ;
+}
+
+.artist-info,
+#artist-photo {
+    margin-left: 8%;
+}
+
+#artist-photo {
+    max-width: 100%;
+    position: relative;
+    right: -5%;
+}
+
+.name a {
+    font-size: 55px;
+    margin: 0 auto;
+}
+
+.name a:hover {
+    text-decoration: none;
+    color: black;
+}
+
+.pad {
+    padding: 2%;
+}
+
+.bio {
+    font-family: 'Book Antiqua';
+    font-size: 15px;
+    text-align: justify;
+}
+
+.bio::first-letter {
+    font-size: 250%;
+    font-style: italic;
+}
+
+.custom-info {
+    font-weight: bolder;
+}
+
+.album-name,
+.album-year {
+    text-align: center;
+}
+
+.album-cover{
+    padding-top:1.5%; 
+    background: rgb(236, 236, 236);
+}
+
+.album-name a:hover {
+    text-decoration: none;
+    font-weight: bolder;
+    color: rgb(32, 32, 32);
+}
+
+@media screen and (max-width: 1024px) {
+    .book-img-container {
         text-align: center;
     }
 }
@@ -243,7 +312,6 @@ div.info {
     .edit-buttons button {
         width: 7%;
     }
-
     #textarea {
         width: 70%;
     }
@@ -252,7 +320,5 @@ div.info {
 @media screen and (max-width: 425px) {
     .edit-buttons button {
         width: 8%;
-        
     }
-
 }
