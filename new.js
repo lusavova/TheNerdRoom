@@ -1,92 +1,93 @@
-// let commentIsHidden = false;
+$('.aside').hide();
+$('.current-book-container').hide();
+//$('.item-container').hide();
+$('.cover').hide();
 
-// $('#bnt-show-hide-comments').on('click', function () {
-//     // this is the button
-//     var $this = $(this);
+let commentIsHidden = false;
 
-//     if (commentIsHidden === true) {
-//         $('.comment.hide-section').show();
-//         commentIsHidden = false;
-//         $("#bnt-show-hide-comments img").replaceWith('<img src="new-elements/left (2).png">')
-//     } else {
-//         $('.comment.hide-section').hide();
-//         commentIsHidden = true;
-//         $("#bnt-show-hide-comments  img").replaceWith('<img src="new-elements/down (2).png">')
-//     }
-// });
+let commentShowHide = function () {
+    if (commentIsHidden === true) {
+        $('.comment.hide-section').show();
+        commentIsHidden = false;
+        $("#bnt-show-hide-comments img").replaceWith('<img src="new-elements/left (2).png">')
+    } else {
+        $('.comment.hide-section').hide();
+        commentIsHidden = true;
+        $("#bnt-show-hide-comments img").replaceWith('<img src="new-elements/down (2).png">')
+    }
+};
 
-// $('#comment-link').on('click', function () {
-//     // this is the button
-//     var $this = $(this);
+$('#bnt-show-hide-comments').on('click', function () {
+    // this is the button
+    var $this = $(this);
+    commentShowHide();
+});
 
-//     if (commentIsHidden === true) {
-//         $('.hide-section').show();
-//         commentIsHidden = false;
-//         $("#bnt-show-hide-comments img").replaceWith('<img src="new-elements/left (2).png">')
-//     } else {
-//         $('.hide-section').hide();
-//         commentIsHidden = true;
-//         $("#bnt-show-hide-comments img").replaceWith('<img src="new-elements/down (2).png">')
-//     }
-// });
+$('#comment-link').on('click', function () {
+    // this is the button
+    var $this = $(this);
 
-// let reviewsIsHidden = false;
+    commentShowHide();
+});
 
-// $('#bnt-show-hide').on('click', function () {
-//     // this is the button
-//     var $this = $(this);
+let reviewsIsHidden = false;
 
-//     if (reviewsIsHidden === true) {
-//         $('.reviews.hide-section').show();
-//         reviewsIsHidden = false;
-//         $("#bnt-show-hide img").replaceWith('<img src="new-elements/left (2).png" alt="OPEN">')
-//     } else {
-//         $('.reviews.hide-section').hide();
-//         reviewsIsHidden = true;
-//         $("#bnt-show-hide img").replaceWith('<img src="new-elements/down (2).png" alt="HIDE">')
-//     }
-// });
-
-// $('#reviews-link').on('click', function () {
-//     // this is the button
-//     var $this = $(this);
-
-//     if (reviewsIsHidden === true) {
-//         $('.reviews.hide-section').show();
-//         reviewsIsHidden = false;
-//         $("#bnt-show-hide img").replaceWith('<img src="new-elements/left (2).png">')
-//     } else {
-//         $('.reviews.hide-section').hide();
-//         reviewsIsHidden = true;
-//         $("#bnt-show-hide img").replaceWith('<img src="new-elements/down (2).png">')
-//     }
-// });
-
-class Book {
-    constructor(title, author, genre, published, bookCover, authorPhoto, bookInfo) {
-        this.title = title;
-        this.author = author;
-        this.genre = genre;
-        this.published = published;
-        this.bookCover = bookCover;
-        this.authorPhoto = authorPhoto;
-        this.bookInfo = bookInfo;
+let reviweShowHide = function () {
+    if (reviewsIsHidden === true) {
+        $('.reviews.hide-section').show();
+        reviewsIsHidden = false;
+        $("#rev-bnt-show-hide img").replaceWith('<img src="new-elements/left (2).png" alt="OPEN">')
+    } else {
+        $('.reviews.hide-section').hide();
+        reviewsIsHidden = true;
+        $("#rev-bnt-show-hide img").replaceWith('<img src="new-elements/down (2).png" alt="HIDE">')
     }
 }
 
-
-var a = new Book("The Great Gatsby", "F. Scott Fitzgerald", ["classic", "horror"], "April 10, 1925", '<img src="book-covers/the-great-gatsby.jpg" alt="The Great Gatsby Book Cover">', "project/books/Authors/Fyodor-Dostoevsky/fyodor-dostoevsky-photo.jpg", "info");
-var b = new Book(";kjsdnf;kj", "F. Scott Fitzgerald", ["classic"], "April 10, 1925", '<img src="book-covers/the-great-gatsby.jpg" alt="The Great Gatsby Book Cover">', "project/books/Authors/Fyodor-Dostoevsky/fyodor-dostoevsky-photo.jpg", "info");
-var c = new Book("3", "F. Scott Fitzgerald", ["classic"], "April 10, 1925", '<img src="book-covers/the-great-gatsby.jpg" alt="The Great Gatsby Book Cover">', "project/books/Authors/Fyodor-Dostoevsky/fyodor-dostoevsky-photo.jpg", "info");
-var books = [a, b, c];
-
-books.forEach(x => {
-    let obj = {
-        name: x.title
-    }
-
-    console.log(x.title);
+$('#rev-bnt-show-hide').on('click', function () {
+    // this is the button
+    var $this = $(this);
+    reviweShowHide();
 });
 
-books.filter(x=>x.genre.includes("horror")).forEach(x=>console.log(x.title));
+$('#reviews-link').on('click', function () {
+    // this is the button
+    var $this = $(this);
+    reviweShowHide();
+});
 
+//console.log(nineteenEightyFour);
+$('#books-link').on('click', function () {
+    // this is the button
+    var $this = $(this);
+    $('.aside').show();
+    $("#item-container-row").hide();    
+    $("#item-container-row").empty();
+    $.get("templates/book-item.html", function(template) {
+        for (let book in booksArray) {
+            var text = Mustache.render(template, booksArray[book]);
+            $("#item-container-row").append(text);
+        }     
+        
+        $('#item-container-row').show();
+    });
+});
+
+$('#book-title').on('click', function () {
+    // this is the button
+    var $this = $(this);
+
+    $('.item-container').hide();
+    $('.current-book-container').show();
+});
+
+$('.nav-icons').hide();
+$(window).resize(function () {
+    if ($(this).width() < 650) {
+        $('.nav-initial').hide();
+        $('.nav-icons').show();
+    } else {
+        $('.nav-initial').show();
+        $('.nav-icons').hide();
+    }
+});
