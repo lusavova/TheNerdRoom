@@ -1,7 +1,7 @@
-$('.aside').hide();
-$('.current-book-container').hide();
-//$('.item-container').hide();
-$('.cover').hide();
+// $('.aside').hide();
+// $('.current-book-container').hide();
+// //$('.item-container').hide();
+// $('.cover').hide();
 
 let commentIsHidden = false;
 
@@ -18,15 +18,10 @@ let commentShowHide = function () {
 };
 
 $('#bnt-show-hide-comments').on('click', function () {
-    // this is the button
-    var $this = $(this);
     commentShowHide();
 });
 
 $('#comment-link').on('click', function () {
-    // this is the button
-    var $this = $(this);
-
     commentShowHide();
 });
 
@@ -45,41 +40,45 @@ let reviweShowHide = function () {
 }
 
 $('#rev-bnt-show-hide').on('click', function () {
-    // this is the button
-    var $this = $(this);
     reviweShowHide();
 });
 
 $('#reviews-link').on('click', function () {
-    // this is the button
-    var $this = $(this);
     reviweShowHide();
 });
 
 //console.log(nineteenEightyFour);
 $('#books-link').on('click', function () {
-    // this is the button
+
     var $this = $(this);
     $('.aside').show();
-    $("#item-container-row").hide();    
+    $("#item-container-row").hide();
     $("#item-container-row").empty();
-    $.get("templates/book-item.html", function(template) {
+    $.get("templates/book-item.html", function (template) {
+
         for (let book in booksArray) {
             var text = Mustache.render(template, booksArray[book]);
             $("#item-container-row").append(text);
-        }     
-        
+        }
+
         $('#item-container-row').show();
+        $('.book-title').on('click', function () {
+            $('.current-book-container').empty();
+            let bookTitle = $(this)
+                .find("a")
+                .text();
+            $.get("templates/current-book.html", function (template) {
+                let book= booksArray.filter(x => x.title===bookTitle)[0];
+                var text = Mustache.render(template, book);
+                console.log(text)
+                $(".current-book-container").append(text);
+            });
+            $('.item-container').hide();
+            $('.current-book-container').show();
+        });
     });
 });
 
-$('#book-title').on('click', function () {
-    // this is the button
-    var $this = $(this);
-
-    $('.item-container').hide();
-    $('.current-book-container').show();
-});
 
 $('.nav-icons').hide();
 $(window).resize(function () {
