@@ -389,6 +389,9 @@ footer {
     .edit-buttons button {
         width: 8%;
     }
+    .logo{
+        display: none;
+    }
 }
 
 .zoom{
@@ -401,3 +404,6 @@ footer {
     transform: scale(1.04);
 }
 
+#book-title, .book-sum{
+    padding-left: 30px;
+}
