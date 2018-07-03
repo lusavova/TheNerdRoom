@@ -1,0 +1,51 @@
+<style>
+    .item {
+        padding-top: 2%;
+    }
+
+    .img-container>img {
+        width: 70%;
+        padding: 10px;
+        text-align: center;
+        border: 1px black dashed
+    }
+
+    .img-container {
+        text-align: center;
+    }
+
+    .title-and-author {
+        text-align: center;
+    }
+
+    .book-info {
+        font-size: 14px;
+        color: rgb(255, 159, 15);
+    }
+
+    #book-title>a
+     {
+        text-decoration: none;
+        font-size: 18px;
+    }
+
+    #book-title>a:hover,
+    #book-author>a:hover {
+        font-weight: bolder;
+    }
+</style>
+
+<div class="item col-lg-3 col-md-5 col-sm-0 col-xs-0">
+    <div class="img-container">
+        <img id="book-cover-image" src="{{bookCover}}" alt="Book Cover">
+    </div>
+    <div class="title-and-author">
+        <div class="book-title">
+            <a href="#">{{title}}</a>
+        </div>
+        <div class="book-info">by</div>
+        <div id="book-author" class="author italic" style="padding-bottom: 20px; ">
+            <a href="#" style="text-decoration: none; font-size: 16px;">{{author}}</a>
+        </div>
+    </div>
+</div>

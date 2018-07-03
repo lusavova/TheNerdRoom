@@ -20,10 +20,6 @@ body,
     font-family: 'Bahnschrift Condensed', sans-serif;
 }
 
-ul {
-    list-style-type: none;
-}
-
 hr {
     border: 0;
     height: 1px;
@@ -84,8 +80,14 @@ hr.sep-line {
     background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
 }
 
-a:-webkit-any-link {
+a,
+a:hover {
     color: black;
+}
+
+a:hover {
+    text-decoration: none;
+    font-weight: bolder;
 }
 
 .list.list-horizontal {
@@ -104,30 +106,21 @@ a:-webkit-any-link {
     padding-left: 15px;
 }
 
-.list.list-horizontal li a:hover {
-    color: crimson;
-}
-
 .list.list-horizontal {
     margin: 0 auto;
-}
-
-.aside {
-    background: salmon;
-    padding: 20px;
-}
-
-.left {
-    background: pink;
 }
 
 footer {
     background: yellow;
 }
 
-.item {
+/* ASIDE */
+
+
+
+/* .item {
     padding-right: 0;
-}
+} */
 
 /* ICON NAVIGATION */
 
@@ -343,8 +336,6 @@ div.info {
     .add-review-button {
         width: 150%;
     }
-
-    
 }
 
 @media screen and (max-width: 768px) {
@@ -357,7 +348,6 @@ div.info {
     #item-cover {
         display: none;
     }
-
 }
 
 @media screen and (max-width: 425px) {
@@ -365,4 +355,3 @@ div.info {
         width: 8%;
     }
 }
-

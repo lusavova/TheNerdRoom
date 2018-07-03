@@ -1,0 +1,44 @@
+<div class="row justify-content-center">
+
+        <div class="book-img-container col-lg-4 col-md-12 col-sm-0 col-xs-0">
+            <img src="{{bookCover}}" alt="{{title}} Book Cover">
+        </div>
+
+        <div class="book-container col-lg-7 col-md-0 col-sm-0">
+            <hr>
+            <div id="book-title ">
+                <h1 class="uppercase">{{title}}</h1>
+            </div>
+            <hr>
+
+            <div id="author-photo">
+                <img class="personal-photo" src="{{authorPhoto}}" alt="{{author}} photo">
+            </div>
+
+            <div class="row">
+                <div class="book-info-container col-5 info text-right">
+                    Author:
+                </div>
+                <div class="current-book-info-container col-7">
+                    <a href="#">{{author}}</a>
+                </div>
+                <div class="book-info-container col-5 info text-right">
+                    Genre:
+                </div>
+                <div class="current-book-info-container col-7">
+                    <a href="#">{{genre}}</a>
+                </div>
+                <div class="book-info-container col-5 info text-right">
+                    Published:
+                </div>
+                <div class="current-book-info-container col-7">
+                    {{published}}
+                </div>
+            </div>
+
+            <hr>
+            <p class="book-sum col-lg-12 col-md-12 col-sm-0"> {{bookInfo}}</p>
+        </div>
+
+        
+    </div>
