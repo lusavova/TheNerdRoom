@@ -1,10 +1,8 @@
-// $('.aside').hide();
-// $('.current-book-container').hide();
-// //$('.item-container').hide();
-// $('.cover').hide();
+$(document).ready(function () {
+    console.log("ready!");
+});
 
 let commentIsHidden = false;
-
 let commentShowHide = function () {
     if (commentIsHidden === true) {
         $('.comment.hide-section').show();
@@ -47,38 +45,107 @@ $('#reviews-link').on('click', function () {
     reviweShowHide();
 });
 
-//console.log(nineteenEightyFour);
-$('#books-link').on('click', function () {
+let currentBookInfo = function () {
+    $('#item-container-row').show();
+    $('.book-title').on('click', function () {
+        $('.item-container').hide();
+        $('.current-book-container').empty();
+        let bookTitle = $(this)
+            .find("a")
+            .text();
 
-    var $this = $(this);
-    $('.aside').show();
-    $("#item-container-row").hide();
-    $("#item-container-row").empty();
+        $.get("templates/current-book.html", function (template) {
+            let book = booksArray.filter(x => x.title === bookTitle)[0];
+            var text = Mustache.render(template, book);
+
+            $(".current-book-container").append(text);
+        });
+        $('.current-book-container').show();
+    });
+}
+
+let showCategoryItems = function (books) {
     $.get("templates/book-item.html", function (template) {
-
-        for (let book in booksArray) {
-            var text = Mustache.render(template, booksArray[book]);
+        for (let book in books) {
+            var text = Mustache.render(template, books[book]);
             $("#item-container-row").append(text);
         }
-
-        $('#item-container-row').show();
-        $('.book-title').on('click', function () {
-            $('.current-book-container').empty();
-            let bookTitle = $(this)
-                .find("a")
-                .text();
-            $.get("templates/current-book.html", function (template) {
-                let book= booksArray.filter(x => x.title===bookTitle)[0];
-                var text = Mustache.render(template, book);
-                console.log(text)
-                $(".current-book-container").append(text);
-            });
-            $('.item-container').hide();
-            $('.current-book-container').show();
-        });
+        currentBookInfo();
     });
+}
+
+
+$('#books-link').on('click', function () {
+    $("#item-container-row").empty();
+    let books = booksArray;
+    showCategoryItems(books);
 });
 
+$('.classics-books').on('click', function () {
+    $("#item-container-row").empty();
+    let books = booksArray.filter(x => x.genre.includes("Classics"));
+    showCategoryItems(books);
+});
+
+$('.science-fiction-books').on('click', function () {
+    $("#item-container-row").empty();
+    let books = booksArray.filter(x => x.genre.includes("Science Fiction"));
+    showCategoryItems(books);
+});
+
+$('.horror-books').on('click', function () {
+    $("#item-container-row").empty();
+    let books = booksArray.filter(x => x.genre.includes("Horror"));
+    showCategoryItems(books);
+});
+
+$('.crime-books').on('click', function () {
+    $("#item-container-row").empty();
+    let books = booksArray.filter(x => x.genre.includes("Crime"));
+    showCategoryItems(books);
+});
+
+$('.fantasy-books').on('click', function () {
+    $("#item-container-row").empty();
+    let books = booksArray.filter(x => x.genre.includes("Fantasy"));
+    showCategoryItems(books);
+});
+
+$('.young-adult-books').on('click', function () {
+    $("#item-container-row").empty();
+    let books = booksArray.filter(x => x.genre.includes("Young Adult"));
+    showCategoryItems(books);
+});
+$('.adventure-books').on('click', function () {
+    $("#item-container-row").empty();
+    let books = booksArray.filter(x => x.genre.includes("Adventure"));
+    showCategoryItems(books);
+});
+$('.thriller-books').on('click', function () {
+    $("#item-container-row").empty();
+    let books = booksArray.filter(x => x.genre.includes("Thriller"));
+    showCategoryItems(books);
+});
+$('.short-stories-books').on('click', function () {
+    $("#item-container-row").empty();
+    let books = booksArray.filter(x => x.genre.includes("Short Stories"));
+    showCategoryItems(books);
+});
+$('.philosophy-books').on('click', function () {
+    $("#item-container-row").empty();
+    let books = booksArray.filter(x => x.genre.includes("Philosophy"));
+    showCategoryItems(books);
+});
+$('.romance-books').on('click', function () {
+    $("#item-container-row").empty();
+    let books = booksArray.filter(x => x.genre.includes("Romance"));
+    showCategoryItems(books);
+});
+$('.religion-books').on('click', function () {
+    $("#item-container-row").empty();
+    let books = booksArray.filter(x => x.genre.includes("Religion"));
+    showCategoryItems(books);
+});
 
 $('.nav-icons').hide();
 $(window).resize(function () {
