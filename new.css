@@ -1,4 +1,4 @@
-html{
+html {
     position: relative;
     min-height: 100%;
 }
@@ -25,7 +25,7 @@ body,
     font-family: 'Bahnschrift Condensed', sans-serif;
 }
 
-li{
+li {
     list-style: none;
 }
 
@@ -121,7 +121,7 @@ a:hover {
 
 /* ASIDE */
 
-.aside{
+.aside {
     padding-top: 1%;
     padding-left: 3%;
 }
@@ -132,16 +132,15 @@ a:hover {
 
 .aside #genre-categories>li {
     padding-left: 30px;
-
 }
 
 ul>li {
     text-transform: uppercase;
 }
 
-#menu-icon{
+#menu-icon {
     padding-bottom: 1%;
-    width: 20px; 
+    width: 20px;
 }
 
 /* .item {
@@ -280,6 +279,7 @@ div.info {
 }
 
 /* MUSIC sheet */
+
 /* 
 .cover {
     padding-top: 2%;
@@ -356,11 +356,12 @@ div.info {
 } */
 
 /* FOOTER */
-footer{
+
+footer {
     padding: 2%;
     text-align: right;
     color: white;
-    background-color: rgb(48, 48, 48); 
+    background-color: rgb(48, 48, 48);
 }
 
 @media screen and (max-width: 1024px) {
@@ -389,3 +390,14 @@ footer{
         width: 8%;
     }
 }
+
+.zoom{
+    transition: transform .2s;
+}
+
+.zoom:hover {
+    -ms-transform: scale(1.04);
+    -webkit-transform: scale(1.04);
+    transform: scale(1.04);
+}
+
