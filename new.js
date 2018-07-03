@@ -45,15 +45,35 @@ $('#reviews-link').on('click', function () {
     reviweShowHide();
 });
 
+let currentAuthorInfo = function () {
+    $('#item-container-row').show();
+    $('.book-author').on('click', function () {
+        $('.item-container').hide();
+        $('.current-author-container').empty();
+        let authorName = $(this)
+            .find("a")
+            .text();
+            //debugger;
+        $.get("templates/current-author.html", function (template) {
+            let author = authorsArray.filter(x => x.name === authorName)[0];
+            var text = Mustache.render(template, author);
+
+            $(".current-author-container ").append(text);
+        });
+        $('.current-author-container ').show();
+    });
+}
+
 let currentBookInfo = function () {
     $('#item-container-row').show();
+    $('.item-container').show();
+    $('.current-author-container').hide();
     $('.book-title').on('click', function () {
         $('.item-container').hide();
         $('.current-book-container').empty();
         let bookTitle = $(this)
             .find("a")
             .text();
-
         $.get("templates/current-book.html", function (template) {
             let book = booksArray.filter(x => x.title === bookTitle)[0];
             var text = Mustache.render(template, book);
@@ -71,6 +91,9 @@ let showCategoryItems = function (books) {
             $("#item-container-row").append(text);
         }
         currentBookInfo();
+        $('.current-book-container').hide();
+        $('.current-author-container').hide();
+        currentAuthorInfo();
     });
 }
 
@@ -91,6 +114,7 @@ $('.science-fiction-books').on('click', function () {
     $("#item-container-row").empty();
     let books = booksArray.filter(x => x.genre.includes("Science Fiction"));
     showCategoryItems(books);
+
 });
 
 $('.horror-books').on('click', function () {

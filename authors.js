@@ -14,6 +14,7 @@ class Author{
 let georgeOrwell = new Author();
 
 georgeOrwell.name = "George Orwell";
+georgeOrwell.cover = "authors/George-Orwell-cover.jpg";
 georgeOrwell.authorPhoto = "authors/George-Orwell-photo.jpg";
 georgeOrwell.birthPlace = "Motihari, Bengal Presidency, British India"
 georgeOrwell.born = "25 June 1903";
