@@ -38,7 +38,7 @@
                         <nav class="nav nav-initial uppercase">
                             <ul class="list list-horizontal">                            
                                 <li>
-                                    <a id="books-link" href="#" class="nav-links">Books</a>                        
+                                    <a class="books-link" href="#" class="nav-links">Books</a>                        
                                 </li>
                                 <li>
                                     <a href="#" class="nav-links">Movies</a>
@@ -56,7 +56,7 @@
                         <nav class="nav nav-icons">
                             <ul class="list list-horizontal">                            
                                 <li>
-                                    <img src="project/icons/book.png" alt="Books">
+                                    <img class="books-link" src="project/icons/book.png" alt="Books">
                                 </li>
                                 <li>
                                     <img src="project/icons/camera.png" alt="Movies">
@@ -78,10 +78,11 @@
         <div class="row ">
 
             <div class="aside col-lg-3 col-md-0 col-sm-12 col-xs-0">
+                <img id="menu-icon" src="project/icons/menu.png" alt="">
                 <ul id="main-categories">
-                    <li><a href="#">Books</a></li>
+                    <li><a id="books-link" class="books-link" href="#">Books</a></li>
                     <ul id="book-categories">
-                        <li><a href="#">Genre</a></li>
+                        <li><a id="genre-link" class="books-link" href="#">Genre</a></li>
                         <ul id="genre-categories">
                             <li class="classics-books"><a href="#">Classics</a></li>
                             <li class="science-fiction-books"><a href="#">Science Fiction</a></li>
@@ -96,7 +97,7 @@
                             <li class="romance-books"><a href="#">Romance</a></li>
                             <li class="religion-books"><a href="#">Religion</a></li>
                         </ul>
-                        <li><a href="#">Authors</a></li>
+                        <li><a class="authors-category" href="#">Authors</a></li>
                     </ul>
                     <li><a href="#">Movies</a></li>
                     <li><a href="#">Music</a></li>
@@ -225,6 +226,11 @@
             <p>Copyright 2018 © The Nerd Room. All rights reserved.</p>
         </div>
     </footer>
+
+    <script
+  src="https://code.jquery.com/ui/1.12.0/jquery-ui.js"
+  integrity="sha256-0YPKAwZP7Mp3ALMRVB2i8GXeEndvCq3eSl/WsAl1Ryk="
+  crossorigin="anonymous"></script>
 
     <script src="authors.js"></script>
     <script src="book.js"></script>

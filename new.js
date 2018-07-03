@@ -2,6 +2,8 @@ $(document).ready(function () {
     console.log("ready!");
 });
 
+$('.aside').hide();
+
 let commentIsHidden = false;
 let commentShowHide = function () {
     if (commentIsHidden === true) {
@@ -68,6 +70,7 @@ let currentBookInfo = function () {
     $('#item-container-row').show();
     $('.item-container').show();
     $('.current-author-container').hide();
+
     $('.book-title').on('click', function () {
         $('.item-container').hide();
         $('.current-book-container').empty();
@@ -97,8 +100,8 @@ let showCategoryItems = function (books) {
     });
 }
 
-
-$('#books-link').on('click', function () {
+$('.books-link').on('click', function () {
+    $('.aside').show();
     $("#item-container-row").empty();
     let books = booksArray;
     showCategoryItems(books);
@@ -171,6 +174,23 @@ $('.religion-books').on('click', function () {
     showCategoryItems(books);
 });
 
+let showAuthorsCategory = function (authors) {
+    $.get("templates/author-item.html", function (template) {
+        for (let currentAuthor in authors) {
+            var text = Mustache.render(template, authors[currentAuthor]);
+            $("#item-container-row").append(text);
+        }
+        $('.current-author-container').hide();
+        currentAuthorInfo();
+    });
+}
+
+$('.authors-category').on('click', function () {
+    $("#item-container-row").empty();
+    let authors = authorsArray;
+    showAuthorsCategory(authors);
+});
+
 $('.nav-icons').hide();
 $(window).resize(function () {
     if ($(this).width() < 650) {
@@ -180,4 +200,22 @@ $(window).resize(function () {
         $('.nav-initial').show();
         $('.nav-icons').hide();
     }
+});
+
+
+
+$("ul#book-categories").hide();
+$("ul#genre-categories").hide();
+$("ul#main-categories").hide();
+
+$("#menu-icon").click(function(){
+    $("ul#main-categories").toggle("slide");
+});
+
+$("#books-link").click(function(){
+    $("ul#book-categories").toggle("slide");
+});
+
+$("#genre-link").click(function(){
+    $("ul#genre-categories").toggle("slide");
 });

@@ -26,6 +26,7 @@ let fyodorDostoevsky = new Author();
 
 fyodorDostoevsky.name = "Fyodor Dostoevsky";
 fyodorDostoevsky.authorPhoto = "authors/Fyodor-Dostoevsky-photo.jpg";
+fyodorDostoevsky.cover = "authors/Fyodor-Dostoevsky-cover.jpg";
 fyodorDostoevsky.birthPlace = "Moscow, Moscow Governorate, Russian Empire"
 fyodorDostoevsky.born = "11 November 1821";
 fyodorDostoevsky.died = "9 February 1881 (aged 59)";
@@ -36,6 +37,7 @@ let oscarWilde =new Author();
 
 oscarWilde.name = "Oscar Wilde";
 oscarWilde.authorPhoto = "authors/oscar-wilde-photo.jpg";
+oscarWilde.cover="authors/Oscar-Wilde-cover.jpeg";
 oscarWilde.birthPlace = "Dublin, Ireland"
 oscarWilde.born = "16 October 1854";
 oscarWilde.died = "30 November 1900 (aged 46)";
@@ -46,6 +48,7 @@ let bramStoker = new Author();
 
 bramStoker.name = "Bram Stocker";
 bramStoker.authorPhoto = "authors/bram-stoker-photo.jpg";
+bramStoker.cover = "authors/Bram-Stoker-cover.jpg";
 bramStoker.birthPlace = "Clontarf, Dublin, Ireland"
 bramStoker.born = "8 November 1847";
 bramStoker.died = "	20 April 1912 (aged 64)";
@@ -56,6 +59,7 @@ let rayBradbury = new Author();
 
 rayBradbury.name = "Ray Bradbury";
 rayBradbury.authorPhoto = "authors/Ray-Bradbury-photo.jpg";
+rayBradbury.cover = "authors/ray-br-cover.jpg";
 rayBradbury.birthPlace = "Waukegan, Illinois, U.S."
 rayBradbury.born = "22 August 1920";
 rayBradbury.died = "05 June 2012 (aged 91)";
@@ -66,6 +70,7 @@ let marioPuzo = new Author();
 
 marioPuzo.name = "Mario Puzo";
 marioPuzo.authorPhoto = "authors/mario-puzo-photo.jpg";
+marioPuzo.cover = "authors/mario-puzo-cover.jpg";
 marioPuzo.birthPlace = "Manhattan, New York, U.S."
 marioPuzo.born = "15 October 1920";
 marioPuzo.died = "02 July 1999 (aged 78)";
@@ -76,6 +81,7 @@ let jkrowling = new Author();
 
 jkrowling.name = "Joanne Rowling";
 jkrowling.authorPhoto = "authors/j.k.r-photo.jpg";
+jkrowling.cover = "authors/jkr-cover.jpg";
 jkrowling.birthPlace = "Yate, Gloucestershire, England"
 jkrowling.born = "31 July 1965";
 jkrowling.died = "";
@@ -86,6 +92,7 @@ let tolkien = new Author();
 
 tolkien.name = "John Ronald Reuel Tolkien";
 tolkien.authorPhoto = "authors/tolken-photo.jpg";
+tolkien.cover = "authors/tolken-cover.jpeg";
 tolkien.birthPlace = "Bloemfontein, Orange Free State "
 tolkien.born = "3 January 1892";
 tolkien.died = "2 September 1973 (aged 81)";
@@ -96,6 +103,7 @@ let stephenKing = new Author();
 
 stephenKing.name = "Stephen King";
 stephenKing.authorPhoto = "authors/stephen-king-photo.jpg";
+stephenKing.cover = "authors/stephen_king-cover.jpg";
 stephenKing.birthPlace = "Portland, Maine, U.S. "
 stephenKing.born = "21 September 1947 ";
 stephenKing.died = "";
@@ -106,6 +114,7 @@ let williamGolding = new Author();
 
 williamGolding.name = "William Golding";
 williamGolding.authorPhoto = "authors/william-golding-photo.jpg";
+williamGolding.cover = "authors/william-golding-cover.jpg";
 williamGolding.birthPlace = "Newquay, Cornwall, England"
 williamGolding.born = "19 September 1911 ";
 williamGolding.died = "19 June 1993 (aged 81)";
@@ -116,6 +125,7 @@ let franzKafka = new Author();
 
 franzKafka.name = "Franz Kafka";
 franzKafka.authorPhoto = "authors/franz-kafka-photo.jpg";
+franzKafka.cover = "authors/franz-kafka-cover.jpg";
 franzKafka.birthPlace = "Prague, Bohemia, Lands of the Bohemian Crown, Austria-Hungary"
 franzKafka.born = "03 July 1883";
 franzKafka.died = "03 June 1924 (aged 40)";
@@ -126,6 +136,7 @@ let johnSteinbeck = new Author();
 
 johnSteinbeck.name = "John Steinbeck";
 johnSteinbeck.authorPhoto = "authors/steinbeck-photo.jpg";
+johnSteinbeck.cover = "authors/steinbeck-cover.jpg";
 johnSteinbeck.birthPlace = "Salinas, California, U.S."
 johnSteinbeck.born = "February 27, 1902";
 johnSteinbeck.died = "December 20, 1968 (aged 66)";
@@ -136,6 +147,7 @@ let janeAusten = new Author();
 
 janeAusten.name = "Jane Austen";
 janeAusten.authorPhoto = "authors/Jane-Austen-photo.jpg";
+janeAusten.cover = "authors/Jane-Austen-cover.jpg";
 janeAusten.birthPlace = "Steventon Rectory, Hampshire, England"
 janeAusten.born = "16 December 1775";
 janeAusten.died = "18 July 1817 (aged 41)";
@@ -147,6 +159,7 @@ let hermanHesse = new Author();
 
 hermanHesse.name = "Herman Hesse";
 hermanHesse.authorPhoto = "authors/herman-hesse-photo.jpg";
+hermanHesse.cover = "authors/hermann-hesse-cover.jpg";
 hermanHesse.birthPlace = "Montagnola, Ticino, Switzerland"
 hermanHesse.born = "02 July 1877";
 hermanHesse.died = "09 August 1962 (aged 85)";
@@ -157,6 +170,7 @@ let jdSalinger = new Author();
 
 jdSalinger.name = "J.D. Salinger";
 jdSalinger.authorPhoto = "authors/jd-salinger-photo.jpg";
+jdSalinger.cover = "authors/jd-salinger-cover.jpg";
 jdSalinger.birthPlace = "Manhattan, New York, U.S."
 jdSalinger.born = "January 1, 1919";
 jdSalinger.died = "January 27, 2010 (aged 91)";
@@ -168,6 +182,7 @@ let fScottFitzgerald = new Author();
 
 fScottFitzgerald.name = "F.Scott Fitzgerald";
 fScottFitzgerald.authorPhoto = "authors/f-scott-photo.jpg";
+fScottFitzgerald.cover = "authors/f-scott-cover.jpg";
 fScottFitzgerald.birthPlace = "St. Paul, Minnesota, U.S."
 fScottFitzgerald.born = "September 24, 1896";
 fScottFitzgerald.died = "December 21, 1940 (aged 44)";
@@ -179,6 +194,7 @@ let ernestHemingway = new Author();
 
 ernestHemingway.name = "Ernest Hemingway";
 ernestHemingway.authorPhoto = "authors/ernest-hemingway-photo.jpg";
+ernestHemingway.cover = "authors/ernest-hemingway-cover.jpg";
 ernestHemingway.birthPlace = "Oak Park, Illinois, U.S."
 ernestHemingway.born = "July 21, 1899";
 ernestHemingway.died = "July 2, 1961 (aged 61)";
@@ -190,6 +206,7 @@ let harperLee = new Author();
 
 harperLee.name = "Herper Lee";
 harperLee.authorPhoto = "authors/harper-lee-photo.jpg";
+harperLee.cover = "authors/harper-lee-cover.jpg";
 harperLee.birthPlace = "Monroeville, Alabama, U.S."
 harperLee.born = "April 28, 1926";
 harperLee.died = "February 19, 2016 (aged 89)";
