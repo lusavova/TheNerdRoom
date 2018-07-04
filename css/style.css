@@ -1,0 +1,430 @@
+html {
+    position: relative;
+    min-height: 100%;
+}
+
+html,
+body {
+    widows: 100%;
+    height: 100%;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Bahnschrift Condensed', sans-serif;
+    font-size: 20px;
+}
+
+body {
+    overflow-x: hidden;
+}
+
+body,
+.search input[type=text] {
+    font-family: 'Bahnschrift Condensed', sans-serif;
+}
+
+li {
+    list-style: none;
+}
+
+hr {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+}
+
+header {
+    background-color: rgb(242, 242, 242);
+}
+
+#search-bar {
+    text-align: right;
+}
+
+.search input[type=text] {
+    font-size: 16px;
+    border: none;
+    border-radius: 3px;
+    outline-color: rgb(255, 255, 110);
+    color: rgb(0, 33, 63);
+    width: 50%;
+}
+
+.search button {
+    background: rgb(245, 245, 150);
+    border: none;
+    cursor: pointer;
+    outline: none;
+    width: 10%;
+    border-radius: 5px;
+}
+
+#img-button {
+    width: 15px;
+}
+
+#submit-button:hover {
+    background: rgb(219, 156, 255);
+}
+
+.logo>img {
+    max-width: 60%;
+}
+
+.logo {
+    margin: 0 auto;
+    width: 10%;
+    margin-bottom: 1%;
+}
+
+.logo img {
+    margin-left: 20%;
+}
+
+hr.sep-line {
+    border: 0;
+    height: 1px;
+    background-image: linear-gradient(to right, rgba(0, 0, 0, 0), rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0));
+}
+
+a,
+a:hover {
+    color: black;
+}
+
+a:hover {
+    text-decoration: none;
+    font-weight: bolder;
+}
+
+.list.list-horizontal {
+    font-style: normal;
+}
+
+.uppercase {
+    text-transform: uppercase;
+}
+
+.list.list-horizontal li {
+    display: inline-block;
+}
+
+.list.list-horizontal li a {
+    padding-left: 15px;
+}
+
+.list.list-horizontal {
+    margin: 0 auto;
+}
+
+/* ASIDE */
+
+.aside {
+    padding-top: 1%;
+    padding-left: 3%;
+}
+
+.aside #book-categories>li {
+    padding-left: 15px;
+}
+
+.aside #genre-categories>li {
+    padding-left: 30px;
+}
+
+ul>li {
+    text-transform: uppercase;
+}
+
+#menu-icon {
+    margin: 2%;
+    width: 20px;
+}
+
+/* .item {
+    padding-right: 0;
+} */
+
+/* ICON NAVIGATION */
+
+.nav-icons>.list-horizontal>li {
+    padding: 5px;
+}
+
+.nav-icons>.list-horizontal>li>img {
+    height: 40px;
+}
+
+/* INITIAL SCREEN */
+
+.intial-screen a {
+    font-size: 80px;
+}
+
+.intial-screen a:hover {
+    color: rgb(69, 69, 172);
+}
+
+.intial-screen-image {
+    max-width: 100%;
+    padding: 2%;
+    border-radius: 50px;
+}
+
+.intial-screen-icon{
+    max-width: 60%;
+}
+
+/* CURRENT BOOK */
+
+.book-container {
+    margin: 0;
+    padding: 0;
+}
+
+.book-img-container {
+    padding-top: 2%;
+    text-align: right;
+}
+
+.book-img-container>img {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    max-width: 80%;
+}
+
+div.info {
+    color: rgb(209, 112, 0);
+}
+
+.current-book-info-container div {
+    padding-left: 2%;
+}
+
+.current-book-info-container a:hover {
+    text-decoration: none;
+    font-weight: bolder;
+    color: rgb(32, 32, 32);
+}
+
+#author-photo {
+    position: relative;
+    left: 7%;
+}
+
+.personal-photo {
+    border-radius: 50%;
+}
+
+#author-photo img {
+    float: left;
+    max-width: 22%;
+    box-shadow: 2px 2px 2px rgb(173, 173, 173);
+}
+
+.book-sum {
+    font-family: 'Book Antiqua';
+    font-size: 15px;
+    text-align: justify;
+    padding-top: 3.5%;
+}
+
+.book-sum::first-letter {
+    font-size: 250%;
+    font-style: italic;
+}
+
+/* COMMENT SECTION */
+
+.comments {
+    float: left;
+    margin-top: 2%;
+}
+
+.comments-container>a:hover {
+    color: goldenrod;
+    text-decoration: none;
+}
+
+#textarea {
+    float: right;
+    margin: 2% 10%;
+    margin-top: 1%;
+    color: rgb(163, 163, 163);
+    border: 1px rgb(179, 179, 179) solid;
+    border-radius: 1%;
+    color: rgb(49, 49, 49);
+    width: 50%;
+    height: 150px;
+}
+
+::placeholder {
+    color: rgb(156, 156, 156);
+    opacity: 1;
+}
+
+.img-button {
+    max-width: 80%;
+}
+
+.edit-buttons {
+    display: inline-block;
+    text-align: right;
+    margin-top: 3%;
+    margin-right: 10%;
+}
+
+.edit-buttons button {
+    width: 3%;
+    border: none;
+    color: white;
+    text-align: center;
+    cursor: pointer;
+    padding: 2px;
+    border-radius: 3px;
+}
+
+.edit-buttons button:hover {
+    outline-color: white;
+    background: rgb(219, 156, 255);
+}
+
+#bnt-show-hide {
+    padding: 2px;
+}
+
+#leave-comment button {
+    margin-right: 100px;
+}
+
+/* MUSIC sheet */
+
+/* 
+.cover {
+    padding-top: 2%;
+}
+
+#item-cover {
+    border-radius: 15px;
+    opacity: 0.8;
+}
+
+#item-cover,
+.album-cover-img {
+    max-width: 100%;
+}
+
+#item-cover {
+    max-width: 100%;
+    ;
+}
+
+#artist-photo {
+    max-width: 100%;
+    position: relative;
+    right: -5%;
+}
+
+.name a {
+    font-size: 55px;
+    margin: 0 auto;
+}
+
+.name a:hover {
+    text-decoration: none;
+    color: black;
+}
+
+.pad {
+    padding: 2%;
+}
+
+.bio {
+    font-family: 'Book Antiqua';
+    font-size: 15px;
+    text-align: justify;
+}
+
+.bio::first-letter {
+    font-size: 250%;
+    font-style: italic;
+}
+
+.custom-info {
+    font-weight: bolder;
+}
+
+.album-name,
+.album-year {
+    text-align: center;
+}
+
+.album-cover {
+    padding-top: 1.5%;
+    background: rgb(236, 236, 236);
+}
+
+.album-name a:hover {
+    text-decoration: none;
+    font-weight: bolder;
+    color: rgb(32, 32, 32);
+}
+
+#leave-review {
+    text-align: right;
+} */
+
+/* FOOTER */
+
+footer {
+    padding: 2%;
+    text-align: right;
+    color: white;
+    background-color: rgb(48, 48, 48);
+}
+
+@media screen and (max-width: 1024px) {
+    .book-img-container {
+        text-align: center;
+    }
+    .add-review-button {
+        width: 150%;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .edit-buttons button {
+        width: 7%;
+    }
+    #textarea {
+        width: 80%;
+    }
+    #item-cover {
+        display: none;
+    }
+}
+
+@media screen and (max-width: 425px) {
+    .edit-buttons button {
+        width: 8%;
+    }
+    .logo {
+        display: none;
+    }
+}
+
+.zoom {
+    transition: transform .2s;
+}
+
+.zoom:hover {
+    -ms-transform: scale(1.04);
+    -webkit-transform: scale(1.04);
+    transform: scale(1.04);
+}
+
+#book-title,
+.book-sum {
+    padding-left: 30px;
+}
