@@ -1,0 +1,8 @@
+![alt text](https://github.com/lusavova/the-nerd-room/blob/master/imgs/cover.jpg)
+![alt text](https://github.com/lusavova/the-nerd-room/blob/master/imgs/1.jpg)
+![alt text](https://github.com/lusavova/the-nerd-room/blob/master/imgs/2.jpg)
+![alt text](https://github.com/lusavova/the-nerd-room/blob/master/imgs/3.jpg)
+![alt text](https://github.com/lusavova/the-nerd-room/blob/master/imgs/4.jpg)
+![alt text](https://github.com/lusavova/the-nerd-room/blob/master/imgs/5.jpg)
+![alt text](https://github.com/lusavova/the-nerd-room/blob/master/imgs/6.jpg)
+![alt text](https://github.com/lusavova/the-nerd-room/blob/master/imgs/7.jpg)
